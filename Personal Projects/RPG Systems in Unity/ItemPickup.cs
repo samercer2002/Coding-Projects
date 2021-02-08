@@ -2,8 +2,10 @@
 
 public class ItemPickup : Interactable
 {
+    // Calls for an item object
     public Item item;
 
+    // Method for interacting and picking up an item
     public override void Interact()
     {
         base.Interact();
@@ -11,6 +13,7 @@ public class ItemPickup : Interactable
         PickUp();
     }
 
+    // Picks up the item and adds it to inventory and destroys the item outside the inventory
     void PickUp()
     {
         Debug.Log("Picking up "+ item.name);
